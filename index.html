@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find a Rental Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/mainhomepage.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <div class="logo">
+        <img src="assets/images/mainlogo.png" alt="JPWN Corporation Logo" />
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li class="business-menu">
+            <a href="#" class="find-home" onclick="toggleBusiness(event)"
+              >Our Business</a
+            >
+            <ul class="business-list">
+              <li><a href="jpwrsmiley.html">JPWR Smiley Resort</a></li>
+              <li><a href="jpwrresidence.html">JPWR Residences</a></li>
+              <li><a href="baguiotransient.html">JPWR Transient</a></li>
+              <li><a href="alumandglass.html">JPWR Aluminum and Glass</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <script>
+      function toggleBusiness(event) {
+        event.preventDefault();
+        const businessMenu = event.target.parentElement;
+        businessMenu.classList.toggle("active");
+      }
+
+      function toggleMenu() {
+        const menu = document.querySelector(".nav-menu");
+        menu.classList.toggle("active");
+      }
+    </script>
+
+    <section class="first-section">
+      <img
+        src="assets/images/bg1.png"
+        alt="Background Image"
+        class="background-img"
+      />
+      <div class="overlay"></div>
+
+      <div class="container-first-section">
+        <div class="text-content">
+          <h1>Welcome to JPW&N Corporation</h1>
+          <p>Let’s find a service that’s perfect for you</p>
+          <a href="#second-section" class="btn">Know More About Us</a>
+        </div>
+
+        <div class="image-content">
+          <!-- Decorative Elements -->
+          <img
+            src="assets/images/bg-collage.jpg"
+            alt="Decorative"
+            class="decor decor-top-left"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!--Second Section-->
+    <section id="second-section" class="second-section">
+      <div class="container">
+        <h2 class="section-title">What We Offer</h2>
+        <p class="section-subtitle">Comprehensive Services Tailored for You</p>
+
+        <div class="services">
+          <div class="service-box">
+            <div class="icon">🏡</div>
+            <h3>Rental Houses</h3>
+            <p>
+              Find the perfect home for your family with our well-maintained
+              rental houses in prime locations.
+            </p>
+          </div>
+          <div class="service-box">
+            <div class="icon">🏖️</div>
+            <h3>Beach Resort</h3>
+            <p>
+              Relax and unwind at our beach resort, offering breathtaking views
+              and top-tier amenities.
+            </p>
+          </div>
+          <div class="service-box">
+            <div class="icon">🛏️</div>
+            <h3>Transient Houses</h3>
+            <p>
+              Comfortable and affordable short-term stays for travelers,
+              business trips, and family getaways.
+            </p>
+          </div>
+          <div class="service-box">
+            <div class="icon">🛠️</div>
+            <h3>Aluminum & Glass Solutions</h3>
+            <p>
+              High-quality aluminum and glass installations for residential and
+              commercial projects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const serviceBoxes = document.querySelectorAll(".service-box");
+
+        serviceBoxes.forEach((box) => {
+          box.addEventListener("click", () => {
+            // Remove 'selected' class from all boxes
+            serviceBoxes.forEach((b) => b.classList.remove("selected"));
+
+            // Add 'selected' class to clicked box
+            box.classList.add("selected");
+          });
+        });
+      });
+    </script>
+
+    <section class="newsletter">
+      <div class="newsletter-content">
+        <h2>Newsletter</h2>
+        <p>
+          Be the first to receive exclusive updates, special offers, and
+          exciting news. Plus, enjoy a 10% discount at Smiley Beach Resort when
+          you subscribe today! 🌴🏖️
+        </p>
+      </div>
+
+      <div class="newsletter-form">
+        <form action="Mainhomepage.php" method="POST">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+          <input
+            type="text"
+            id="first_name"
+            name="first_name"
+            placeholder="First Name"
+            required
+          />
+          <input
+            type="text"
+            id="last_name"
+            name="last_name"
+            placeholder="Last Name"
+            required
+          />
+
+          <select id="age" name="age" required>
+            <option value="">Select Age</option>
+            <option value="18-24">18-24</option>
+            <option value="25-34">25-34</option>
+            <option value="35-44">35-44</option>
+            <option value="45+">45+</option>
+          </select>
+
+          <button type="submit">Subscribe & Get 10% Off</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-left">
+          <img
+            src="assets/images/mainlogo.png"
+            alt="JPW&N Corporation Logo"
+            class="footer-logo"
+          />
+        </div>
+
+        <div class="footer-center">
+          <h3>Our Services</h3>
+          <ul>
+            <li><a href="baguiotransient.html">Baguio Transient</a></li>
+            <li><a href="jpwrresidence.html">JPWR Residence</a></li>
+            <li><a href="jpwrsmiley.html">Similey Resort</a></li>
+            <li><a href="alumandglass.html">Glass and Aluminum Supply</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-right">
+          <div class="review-contact-wrapper">
+            <!-- Contact Info (Now Left-Aligned) -->
+            <div class="contact-info">
+              <h3>Get in Touch</h3>
+              <p><i class="fas fa-phone"></i>0977 802 0701</p>
+              <p><i class="fas fa-envelope"></i> jpwrresidences@gmail.com</p>
+
+              <!-- Social Media Links -->
+              <div class="social-links">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100083330313172"
+                  target="_blank"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+            <!-- Carousel Review Section (Now Left-Aligned) 
+              <div class="review-carousel">
+              <button class="carousel-btn prev" onclick="prevReview()">
+                &#10094;
+              </button>
+              <div class="carousel-content">
+                <p class="review-text">
+                  "Great service and very accommodating!"
+                </p>
+                <p class="review-author">- John D.</p>
+              </div>
+              <button class="carousel-btn next" onclick="nextReview()">
+                &#10095;
+              </button>
+            </div>
+            -->
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 JPW&N Corporation. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

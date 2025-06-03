@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find a Rental Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/alumandglass.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <div class="logo">
+        <img src="assets/images/mainlogo.png" alt="JPWN Corporation Logo" />
+      </div>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li class="business-menu">
+            <a href="#" class="find-home" onclick="toggleBusiness(event)"
+              >Our Business</a
+            >
+            <ul class="business-list">
+              <li><a href="jpwrsmiley.html">JPWR Smiley Resort</a></li>
+              <li><a href="jpwrresidence.html">JPWR Residences</a></li>
+              <li><a href="baguiotransient.html">JPWR Transient</a></li>
+              <li><a href="alumandglass.html">JPWR Aluminum and Glass</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      </nav>
+    </header>
+
+    <script>
+      function toggleBusiness(event) {
+        event.preventDefault();
+        const businessMenu = event.target.parentElement;
+        businessMenu.classList.toggle("active");
+      }
+
+      function toggleMenu() {
+        const menu = document.querySelector(".nav-menu");
+        menu.classList.toggle("active");
+      }
+    </script>
+
+    <!--first section-->
+    <section class="first-section">
+      <div class="container">
+        <div class="text-content">
+          <h4>Welcome to Our Aluminum and Glass Business</h4>
+          <h1>Crafting <br />Windows and Door Glass</h1>
+          <p>
+            At our company, we specialize in creating high-quality aluminum and
+            glass products that enhance the aesthetic and functionality of your
+            living and working environments.
+          </p>
+        </div>
+        <div class="image-content">
+          <img src="assets/images/Alumd2.png" alt="Window Image" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Second Section -->
+    <section class="second-section-SS">
+      <div class="container-SS">
+        <h2>Explore Our Aluminum Expertise</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem">
+          We specialize in the design, fabrication, and installation of
+          high-quality aluminum products—tailored for both residential and
+          commercial spaces. From durable frames to modern partitions and
+          customized fittings, our work blends aesthetics with functionality.
+        </p>
+        <div class="grid-SS">
+          <div class="card-SS">
+            <img src="assets/images/alumn2.jpg" alt="Aluminum Fabrication" />
+            <h3>Custom Fabrication</h3>
+            <p>
+              Precision-crafted windows, doors, and cladding systems to fit any
+              architectural vision.
+            </p>
+          </div>
+          <div class="card-SS">
+            <img src="assets/images/alumn4.jpg" alt="Aluminum Installation" />
+            <h3>Professional Installation</h3>
+            <p>
+              Expert on-site assembly ensuring durability, proper alignment, and
+              weather resistance.
+            </p>
+          </div>
+          <div class="card-SS">
+            <img src="assets/images/alumn3.jpg" alt="Design & Engineering" />
+            <h3>Design & Engineering</h3>
+            <p>
+              Collaborative design solutions to meet structural and aesthetic
+              requirements.
+            </p>
+          </div>
+          <div class="card-SS">
+            <img
+              src="assets/images/alumn1.jpg"
+              alt="Glass and Aluminum Integration"
+            />
+            <h3>Glass & Aluminum Integration</h3>
+            <p>
+              Seamless combinations of glass and aluminum for elegant partitions
+              and facades.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Third Section -->
+    <section class="third-section">
+      <div class="container">
+        <div class="content">
+          <h4>Enhance Your Living Spaces with Quality Windows</h4>
+          <h2>Premium Aluminum & Glass Windows for Every Home</h2>
+          <p>
+            Experience durability, elegance, and innovation with our premium
+            aluminum and glass windows. Designed to maximize natural light while
+            ensuring energy efficiency and security, our windows transform any
+            space with timeless style.
+          </p>
+        </div>
+        <div class="image">
+          <img src="assets/images/alumd7.png" alt="Premium Windows" />
+        </div>
+      </div>
+    </section>
+
+    <!--Fourth Section-->
+    <section class="fourth-section">
+      <div class="container">
+        <div class="image">
+          <img src="assets/images/alumd8.png" alt="Timeless Elegance" />
+        </div>
+        <div class="content">
+          <span class="subtitle">Elevate Your Home</span>
+          <h2>
+            Timeless Elegance, <br />
+            Unparalleled
+          </h2>
+          <p>
+            Experience the perfect balance of form and function with our premium
+            aluminum and glass products. Designed to enhance the aesthetic and
+            improve the energy efficiency of your living and working spaces, our
+            solutions are engineered to deliver superior performance and
+            enduring quality.
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-left">
+          <img
+            src="assets/images/mainlogo.png"
+            alt="JPW&N Corporation Logo"
+            class="footer-logo"
+          />
+        </div>
+
+        <div class="footer-center">
+          <h3>Our Services</h3>
+          <ul>
+            <li><a href="baguiotransient.html">Baguio Transient</a></li>
+            <li><a href="jpwrresidence.html">JPWR Residence</a></li>
+            <li><a href="jpwrsmiley.html">Similey Resort</a></li>
+            <li><a href="alumandglass.html">Glass and Aluminum Supply</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-right">
+          <div class="review-contact-wrapper">
+            <!-- Contact Info (Now Left-Aligned) -->
+            <div class="contact-info">
+              <h3>Get in Touch</h3>
+              <p><i class="fas fa-phone"></i>0977 802 0701</p>
+              <p><i class="fas fa-envelope"></i> jpwrresidences@gmail.com</p>
+
+              <!-- Social Media Links -->
+              <div class="social-links">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100083330313172"
+                  target="_blank"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+            <!-- Carousel Review Section (Now Left-Aligned) 
+              <div class="review-carousel">
+              <button class="carousel-btn prev" onclick="prevReview()">
+                &#10094;
+              </button>
+              <div class="carousel-content">
+                <p class="review-text">
+                  "Great service and very accommodating!"
+                </p>
+                <p class="review-author">- John D.</p>
+              </div>
+              <button class="carousel-btn next" onclick="nextReview()">
+                &#10095;
+              </button>
+            </div>
+            -->
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 JPW&N Corporation. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

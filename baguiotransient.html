@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find a Rental Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/baguiotransient.css" />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <div class="logo">
+        <img src="assets/images/mainlogo.png" alt="JPWN Corporation Logo" />
+      </div>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li class="business-menu">
+            <a href="#" class="find-home" onclick="toggleBusiness(event)"
+              >Our Business</a
+            >
+            <ul class="business-list">
+              <li><a href="jpwrsmiley.html">JPWR Smiley Resort</a></li>
+              <li><a href="jpwrresidence.html">JPWR Residences</a></li>
+              <li><a href="baguiotransient.html">JPWR Transient</a></li>
+              <li><a href="alumandglass.html">JPWR Aluminum and Glass</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      </nav>
+    </header>
+
+    <script>
+      function toggleBusiness(event) {
+        event.preventDefault();
+        const businessMenu = event.target.parentElement;
+        businessMenu.classList.toggle("active");
+      }
+
+      function toggleMenu() {
+        const menu = document.querySelector(".nav-menu");
+        menu.classList.toggle("active");
+      }
+    </script>
+
+    <section class="first-section">
+      <video autoplay muted loop playsinline class="background-video">
+        <source
+          src="https://res.cloudinary.com/dbgiapjao/video/upload/v1741267012/TransientA_hazsha.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <section class="second-section">
+      <div class="content-wrapper">
+        <div class="text-content">
+          <h1>Discover the Enchanting<br />Transient House in Baguio</h1>
+          <h3>Experience the Tranquility</h3>
+          <p class="subtext">Nestled in the heart of a lush green forest</p>
+          <p>
+            Immerse yourself in the natural beauty of Baguio as you step into
+            this cozy abode, where every detail has been carefully curated to
+            create a serene and harmonious atmosphere. Surrounded by towering
+            pine trees and the gentle whispers of the wind, this transient house
+            invites you to slow down, unwind, and reconnect with the beauty of
+            the great outdoors.
+          </p>
+        </div>
+        <div class="image-content">
+          <img src="assets/images/trensientd1.jpg" alt="Transient House" />
+        </div>
+      </div>
+    </section>
+
+    <section class="third-section">
+      <div class="third-wrapper">
+        <div class="third-image">
+          <img
+            src="assets/images/trensientd2.jpg"
+            alt="Baguio Transient House"
+          />
+        </div>
+        <div class="third-text">
+          <h2>Embrace the Tranquility</h2>
+          <p class="subtext">Nestled in the heart of a lush green forest</p>
+          <p>
+            Immerse yourself in the natural beauty of Baguio as you step into
+            this cozy abode, where every detail has been carefully curated to
+            create a serene and harmonious atmosphere. Surrounded by towering
+            pine trees and the gentle whispers of the wind, this transient house
+            invites you to slow down, unwind, and reconnect with the beauty of
+            the great outdoors.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="fourth-section">
+      <div class="fourth-wrapper">
+        <div class="fourth-header">
+          <h1>Discover the Enchanting<br />Transient House in Baguio</h1>
+        </div>
+        <div class="fourth-content">
+          <div class="fourth-text">
+            <h2>Cozy Sanctuary</h2>
+            <p class="subtext">Nestled amidst the lush greenery</p>
+            <p>
+              Step into a world of tranquility, where every detail has been
+              thoughtfully curated to create a harmonious and rejuvenating
+              atmosphere. Surrounded by the majestic pine trees and the gentle
+              caress of the mountain breeze, this transient house invites you to
+              slow down, unwind, and immerse yourself in the beauty of Baguio's
+              natural splendor.
+              <br /><br />
+              Whether you're seeking a romantic escape, a family retreat, or a
+              peaceful solo journey, this enchanting haven is the perfect place
+              to recharge and reconnect with the serenity of the great outdoors.
+            </p>
+          </div>
+
+          <!-- Carousel -->
+          <div class="swiper-container fourth-image">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="assets/images/trensientd3.jpg" alt="Image 1" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/trensientd4.jpg" alt="Image 2" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/trensientd5.jpg" alt="Image 3" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/trensientd6.jpg" alt="Image 4" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/trensientd1.jpg" alt="Image 5" />
+              </div>
+            </div>
+          </div>
+          <!-- End of Carousel -->
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const swiper = new Swiper(".swiper-container", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        loop: true,
+        coverflowEffect: {
+          rotate: 50, // Card rotation angle
+          stretch: 0, // Space between slides (0 keeps them tight)
+          depth: 100, // How deep/3D the cards look
+          modifier: 1, // Effect multiplier
+          slideShadows: true, // Shadow effect on sides
+        },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-left">
+          <img
+            src="assets/images/mainlogo.png"
+            alt="JPW&N Corporation Logo"
+            class="footer-logo"
+          />
+        </div>
+
+        <div class="footer-center">
+          <h3>Our Services</h3>
+          <ul>
+            <li><a href="baguiotransient.html">Baguio Transient</a></li>
+            <li><a href="jpwrresidence.html">JPWR Residence</a></li>
+            <li><a href="jpwrsmiley.html">Similey Resort</a></li>
+            <li><a href="alumandglass.html">Glass and Aluminum Supply</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-right">
+          <div class="review-contact-wrapper">
+            <!-- Contact Info (Now Left-Aligned) -->
+            <div class="contact-info">
+              <h3>Get in Touch</h3>
+              <p><i class="fas fa-phone"></i>0977 802 0701</p>
+              <p><i class="fas fa-envelope"></i> jpwrresidences@gmail.com</p>
+
+              <!-- Social Media Links -->
+              <div class="social-links">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100083330313172"
+                  target="_blank"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+            <!-- Carousel Review Section (Now Left-Aligned) 
+              <div class="review-carousel">
+              <button class="carousel-btn prev" onclick="prevReview()">
+                &#10094;
+              </button>
+              <div class="carousel-content">
+                <p class="review-text">
+                  "Great service and very accommodating!"
+                </p>
+                <p class="review-author">- John D.</p>
+              </div>
+              <button class="carousel-btn next" onclick="nextReview()">
+                &#10095;
+              </button>
+            </div>
+            -->
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 JPW&N Corporation. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

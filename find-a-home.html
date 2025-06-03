@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find a Rental Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap"
+    />
+    <link rel="stylesheet" href="assets/homeresidence.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <div class="header-container">
+        <!-- Back Button -->
+        <button class="back-button" onclick="goBack()">← Back</button>
+      </div>
+    </header>
+
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+
+    <script>
+      function toggleBusiness(event) {
+        event.preventDefault();
+        const businessMenu = event.target.parentElement;
+        businessMenu.classList.toggle("active");
+      }
+
+      function toggleMenu() {
+        const menu = document.querySelector(".nav-menu");
+        menu.classList.toggle("active");
+      }
+    </script>
+
+    <!-- Main section -->
+    <section class="find-a-home-fh">
+      <h2 class="section-title-fh">Find The Best Property</h2>
+      <div class="property-list-fh">
+        <!-- Property 1 -->
+        <div class="property-card-fh">
+          <img
+            src="assets/images/Atis St/Atis1.jpg"
+            alt="House 1"
+            class="property-image-fh"
+          />
+          <div class="property-info-fh">
+            <h3 class="property-price-fh">JPWR</h3>
+            <p class="property-type-fh">Single Family House</p>
+            <p class="property-location-fh">
+              <i class="location-icon-fh">📍</i> Atis St. Antipolo Hills
+            </p>
+            <div class="property-details-fh">
+              <span class="property-size-fh">2000 sqft</span>
+              <span class="property-bedrooms-fh">4 bedrooms</span>
+            </div>
+            <button
+              class="more-btn-fh"
+              data-price="Message us on Facebook for Inquires"
+              data-location="📍 Atis St. Antipolo Hills"
+              data-bed="4 bedrooms"
+              data-size="2000 sqft"
+              data-overview="A stunning 4-bedroom home in Westminster, London. This property offers an open living concept with a beautiful garden."
+              data-amenities="✔️ Spacious living room, ✔️ Modern kitchen, ✔️ 2 luxury bathrooms, ✔️ Private garden & patio, ✔️ Secure garage"
+              data-description="Located in the heart of Westminster, this home provides a peaceful retreat while being close to top attractions in London."
+              data-images="assets/images/Atis St/Atis1.jpg,assets/images/Atis St/Atis2.jpg,assets/images/Atis St/Atis3.jpg,assets/images/Atis St/Atis4.jpg,assets/images/Atis St/Atis5.jpg"
+            >
+              More
+            </button>
+          </div>
+        </div>
+
+        <!-- Property 2 -->
+        <div class="property-card-fh">
+          <img
+            src="assets/images/Everlasting St/everlasting2.jpg"
+            alt="House 2"
+            class="property-image-fh"
+          />
+          <div class="property-info-fh">
+            <h3 class="property-price-fh">JPWR</h3>
+            <p class="property-type-fh">Modern Villa</p>
+            <p class="property-location-fh">
+              <i class="location-icon-fh">📍</i> Everlasting St, Antipolo Hills
+            </p>
+            <div class="property-details-fh">
+              <span class="property-size-fh">3200 sqft</span>
+              <span class="property-bedrooms-fh">5 bedrooms</span>
+            </div>
+            <button
+              class="more-btn-fh"
+              data-price="Message us on Facebook for Inquires"
+              data-location="📍 Everlasting St, Antipolo
+              Hills"
+              data-bed="5 bedrooms"
+              data-size="3200 sqft"
+              data-overview="A luxurious 5-bedroom villa in Beverly Hills with panoramic views of the city."
+              data-amenities="✔️ Infinity pool, ✔️ Smart home features, ✔️ Home theater, ✔️ 3-car garage, ✔️ Private security"
+              data-description="This ultra-modern villa features world-class design and is situated in one of the most exclusive areas of Beverly Hills."
+              data-images="assets/images/Everlasting St/everlasting1.jpg,assets/images/Everlasting St/everlasting2.jpg,assets/images/Everlasting St/everlasting3.jpg,assets/images/Everlasting St/everlasting4.jpg,assets/images/Everlasting St/everlasting5.jpg"
+            >
+              More
+            </button>
+          </div>
+        </div>
+
+        <!-- Property 3 -->
+        <div class="property-card-fh">
+          <img
+            src="assets/images/Dama de noche/dama1.jpg"
+            alt="House 3"
+            class="property-image-fh"
+          />
+          <div class="property-info-fh">
+            <h3 class="property-price-fh">JPWR</h3>
+            <p class="property-type-fh">Townhouse</p>
+            <p class="property-location-fh">
+              <i class="location-icon-fh">📍</i> Dama De Noche, Antipolo Hills
+            </p>
+            <div class="property-details-fh">
+              <span class="property-size-fh">1800 sqft</span>
+              <span class="property-bedrooms-fh">3 bedrooms</span>
+            </div>
+            <button
+              class="more-btn-fh"
+              data-price="Message us on Facebook for Inquires"
+              data-location="📍 Dama De Noche, Antipolo Hills"
+              data-bed="3 bedrooms"
+              data-size="1800 sqft"
+              data-overview="A charming 3-bedroom townhouse in the heart of Toronto, offering modern interiors and cozy living spaces."
+              data-amenities="✔️ Open-concept kitchen, ✔️ Balcony, ✔️ Walk-in closets, ✔️ Parking space"
+              data-description="This townhouse is perfect for urban dwellers who love city life while enjoying a peaceful neighborhood."
+              data-images="assets/images/Dama de noche/dama1.jpg,assets/images/Dama de noche/dama2.jpg,assets/images/Dama de noche/dama3.jpg,assets/images/Dama de noche/dama4.jpg,assets/images/Dama de noche/dama5.jpg"
+            >
+              More
+            </button>
+          </div>
+        </div>
+
+        <!-- Property 4 -->
+        <div class="property-card-fh">
+          <img
+            src="assets/images/Natalia St/natalia1.jpg"
+            alt="House 4"
+            class="property-image-fh"
+          />
+          <div class="property-info-fh">
+            <h3 class="property-price-fh">JPWR</h3>
+            <p class="property-type-fh">Townhouse</p>
+            <p class="property-location-fh">
+              <i class="location-icon-fh">📍</i> Natalia St, Antipolo Hills
+            </p>
+            <div class="property-details-fh">
+              <span class="property-size-fh">5000 sqft</span>
+              <span class="property-bedrooms-fh">4 bedrooms</span>
+            </div>
+            <button
+              class="more-btn-fh"
+              data-price="Message us on Facebook for Inquires"
+              data-location="📍 Natalia St, Antipolo Hills"
+              data-bed="4 bedrooms"
+              data-size="5000 sqft"
+              data-overview="A breathtaking penthouse in Dubai featuring floor-to-ceiling windows with panoramic city views."
+              data-amenities="✔️ Rooftop pool, ✔️ Private elevator, ✔️ Smart home automation, ✔️ Concierge service"
+              data-description="Live in the most prestigious address in Dubai, offering luxury, comfort, and sophistication."
+              data-images="assets/images/Natalia St/natalia1.jpg,assets/images/Natalia St/natalia2.jpg,assets/images/Natalia St/natalia3.jpg,assets/images/Natalia St/natalia4.jpg"
+            >
+              More
+            </button>
+          </div>
+        </div>
+
+        <!-- Property 5 -->
+        <div class="property-card-fh">
+          <img
+            src="assets/images/house5.jpg"
+            alt="House 5"
+            class="property-image-fh"
+          />
+          <div class="property-info-fh">
+            <h3 class="property-price-fh">$7,200</h3>
+            <p class="property-type-fh">Cottage</p>
+            <p class="property-location-fh">
+              <i class="location-icon-fh"></i> Aspen, USA
+            </p>
+            <div class="property-details-fh">
+              <span class="property-size-fh">1500 sqft</span>
+              <span class="property-bedrooms-fh">2 bedrooms</span>
+            </div>
+            <button
+              class="more-btn-fh"
+              data-price="$7,200"
+              data-location="Aspen, USA"
+              data-bed="2 bedrooms"
+              data-size="1500 sqft"
+              data-overview="A cozy cottage in Aspen surrounded by mountains and nature."
+              data-amenities="✔️ Fireplace, ✔️ Outdoor patio, ✔️ Wooden interiors, ✔️ Mountain views"
+              data-description="Perfect for those seeking a tranquil retreat in the heart of nature."
+              data-images="assets/images/house5-1.jpg,assets/images/house5-2.jpg"
+            >
+              More
+            </button>
+          </div>
+        </div>
+
+        <!-- Property 5 -->
+        <div class="property-card-fh">
+          <img
+            src="assets/images/house5.jpg"
+            alt="House 5"
+            class="property-image-fh"
+          />
+          <div class="property-info-fh">
+            <h3 class="property-price-fh">$7,200</h3>
+            <p class="property-type-fh">Cottage</p>
+            <p class="property-location-fh">
+              <i class="location-icon-fh"></i> Aspen, USA
+            </p>
+            <div class="property-details-fh">
+              <span class="property-size-fh">1500 sqft</span>
+              <span class="property-bedrooms-fh">2 bedrooms</span>
+            </div>
+            <button
+              class="more-btn-fh"
+              data-price="$7,200"
+              data-location="Aspen, USA"
+              data-bed="2 bedrooms"
+              data-size="1500 sqft"
+              data-overview="A cozy cottage in Aspen surrounded by mountains and nature."
+              data-amenities="✔️ Fireplace, ✔️ Outdoor patio, ✔️ Wooden interiors, ✔️ Mountain views"
+              data-description="Perfect for those seeking a tranquil retreat in the heart of nature."
+              data-images="assets/images/house5-1.jpg,assets/images/house5-2.jpg"
+            >
+              More
+            </button>
+          </div>
+        </div>
+
+        <!-- Property 5 -->
+        <div class="property-card-fh">
+          <img
+            src="assets/images/house5.jpg"
+            alt="House 5"
+            class="property-image-fh"
+          />
+          <div class="property-info-fh">
+            <h3 class="property-price-fh">$7,200</h3>
+            <p class="property-type-fh">Cottage</p>
+            <p class="property-location-fh">
+              <i class="location-icon-fh"></i> Aspen, USA
+            </p>
+            <div class="property-details-fh">
+              <span class="property-size-fh">1500 sqft</span>
+              <span class="property-bedrooms-fh">2 bedrooms</span>
+            </div>
+            <button
+              class="more-btn-fh"
+              data-price="$7,200"
+              data-location="Aspen, USA"
+              data-bed="2 bedrooms"
+              data-size="1500 sqft"
+              data-overview="A cozy cottage in Aspen surrounded by mountains and nature."
+              data-amenities="✔️ Fireplace, ✔️ Outdoor patio, ✔️ Wooden interiors, ✔️ Mountain views"
+              data-description="Perfect for those seeking a tranquil retreat in the heart of nature."
+              data-images="assets/images/house5-1.jpg,assets/images/house5-2.jpg"
+            >
+              More
+            </button>
+          </div>
+        </div>
+
+        <!-- Property 5 -->
+        <div class="property-card-fh">
+          <img
+            src="assets/images/house5.jpg"
+            alt="House 5"
+            class="property-image-fh"
+          />
+          <div class="property-info-fh">
+            <h3 class="property-price-fh">$7,200</h3>
+            <p class="property-type-fh">Cottage</p>
+            <p class="property-location-fh">
+              <i class="location-icon-fh"></i> Aspen, USA
+            </p>
+            <div class="property-details-fh">
+              <span class="property-size-fh">1500 sqft</span>
+              <span class="property-bedrooms-fh">2 bedrooms</span>
+            </div>
+            <button
+              class="more-btn-fh"
+              data-price="$7,200"
+              data-location="Aspen, USA"
+              data-bed="2 bedrooms"
+              data-size="1500 sqft"
+              data-overview="A cozy cottage in Aspen surrounded by mountains and nature."
+              data-amenities="✔️ Fireplace, ✔️ Outdoor patio, ✔️ Wooden interiors, ✔️ Mountain views"
+              data-description="Perfect for those seeking a tranquil retreat in the heart of nature."
+              data-images="assets/images/house5-1.jpg,assets/images/house5-2.jpg"
+            >
+              More
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination Buttons -->
+      <div class="pagination-container-fh">
+        <button id="prev-btn" class="pagination-btn-fh hidden">&#8592;</button>
+        <button id="next-btn" class="pagination-btn-fh">&#8594;</button>
+      </div>
+    </section>
+
+    <div id="property-modal-fh" class="modal-fh">
+      <div class="modal-content-fh">
+        <span class="close-fh">&times;</span>
+        <div class="modal-body-fh">
+          <div class="modal-image-container-fh">
+            <img
+              id="modal-main-image"
+              src=""
+              alt="Main Image"
+              class="modal-main-image-fh"
+            />
+            <div id="modal-thumbnails" class="modal-thumbnails-fh"></div>
+          </div>
+          <div class="modal-info-fh">
+            <h2 id="modal-price" class="modal-price-fh"></h2>
+            <p><strong>Location:</strong> <span id="modal-location"></span></p>
+            <p><strong>Size:</strong> <span id="modal-size"></span></p>
+            <p><strong>Bedrooms:</strong> <span id="modal-bed"></span></p>
+
+            <button class="modal-tab-fh">Overview</button>
+            <div class="modal-section-fh" id="modal-overview"></div>
+
+            <button class="modal-tab-fh">Amenities</button>
+            <div class="modal-section-fh" id="modal-amenities"></div>
+
+            <button class="modal-tab-fh">Description of the House</button>
+            <div class="modal-section-fh" id="modal-description"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript for Modal -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const modal = document.getElementById("property-modal-fh");
+        const closeModalBtn = document.querySelector(".close-fh");
+        const mainImage = document.getElementById("modal-main-image");
+        const thumbnailsContainer = document.getElementById("modal-thumbnails");
+
+        // Property details elements
+        const modalPrice = document.getElementById("modal-price");
+        const modalLocation = document.getElementById("modal-location");
+        const modalBed = document.getElementById("modal-bed");
+        const modalSize = document.getElementById("modal-size");
+
+        // Tab buttons and sections
+        const modalTabs = document.querySelectorAll(".modal-tab-fh");
+        const modalSections = document.querySelectorAll(".modal-section-fh");
+
+        // Function to hide all tab sections
+        function hideAllTabs() {
+          modalSections.forEach((section) => {
+            section.classList.remove("active");
+          });
+        }
+
+        // Add event listeners to tab buttons
+        modalTabs.forEach((button, index) => {
+          button.addEventListener("click", function () {
+            hideAllTabs();
+            modalSections[index].classList.add("active");
+          });
+        });
+
+        // Function to disable scrolling
+        function disableScroll() {
+          document.body.style.overflow = "hidden";
+        }
+
+        // Function to enable scrolling
+        function enableScroll() {
+          document.body.style.overflow = "";
+        }
+
+        // Open modal and populate data
+        document.querySelectorAll(".more-btn-fh").forEach((button) => {
+          button.addEventListener("click", function () {
+            modal.style.display = "flex";
+            disableScroll(); // ✅ Disable scrolling
+
+            // Populate property data
+            modalPrice.textContent = button.getAttribute("data-price") || "N/A";
+            modalLocation.textContent =
+              button.getAttribute("data-location") || "N/A";
+            modalBed.textContent = button.getAttribute("data-bed") || "N/A";
+            modalSize.textContent = button.getAttribute("data-size") || "N/A";
+
+            modalSections[0].innerHTML =
+              button.getAttribute("data-overview") || "No overview available.";
+            modalSections[1].innerHTML =
+              button.getAttribute("data-amenities") || "No amenities listed.";
+            modalSections[2].innerHTML =
+              button.getAttribute("data-description") ||
+              "No description available.";
+
+            // Handle images
+            let images = button.getAttribute("data-images")
+              ? button.getAttribute("data-images").split(",")
+              : [];
+            if (images.length === 0) {
+              images = ["assets/images/placeholder.jpg"]; // Default placeholder image
+            }
+
+            // Set the main image
+            mainImage.src = images[0];
+
+            // Populate thumbnails
+            thumbnailsContainer.innerHTML = ""; // Clear previous thumbnails
+            images.forEach((imgSrc, index) => {
+              let imgElement = document.createElement("img");
+              imgElement.src = imgSrc;
+              imgElement.classList.add("thumbnail-fh");
+
+              if (index === 0) imgElement.classList.add("active");
+
+              imgElement.addEventListener("click", function () {
+                mainImage.src = imgSrc;
+                document
+                  .querySelectorAll(".thumbnail-fh")
+                  .forEach((img) => img.classList.remove("active"));
+                imgElement.classList.add("active");
+              });
+
+              thumbnailsContainer.appendChild(imgElement);
+            });
+
+            // Hide all sections when modal opens
+            hideAllTabs();
+          });
+        });
+
+        // Close modal function
+        function closeModal() {
+          modal.style.display = "none";
+          enableScroll(); // ✅ Enable scrolling when closing
+        }
+
+        // Event listeners for closing modal
+        if (closeModalBtn) {
+          closeModalBtn.addEventListener("click", closeModal);
+        }
+
+        window.addEventListener("click", function (event) {
+          if (event.target === modal) {
+            closeModal();
+          }
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") {
+            closeModal();
+          }
+        });
+      });
+    </script>
+
+    <!-- JavaScript -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let currentIndex = 0;
+        const properties = document.querySelectorAll(".property-card-fh");
+        const prevBtn = document.getElementById("prev-btn");
+        const nextBtn = document.getElementById("next-btn");
+
+        function getItemsPerPage() {
+          if (window.innerWidth <= 480) return 1;
+          if (window.innerWidth <= 768) return 2;
+          if (window.innerWidth <= 1024) return 3;
+          return 4;
+        }
+
+        let itemsPerPage = getItemsPerPage();
+
+        function showProperties() {
+          properties.forEach((property, index) => {
+            property.style.display =
+              index >= currentIndex && index < currentIndex + itemsPerPage
+                ? "block"
+                : "none";
+          });
+
+          // Enable or disable buttons based on the current index
+          prevBtn.style.display = currentIndex === 0 ? "none" : "block";
+          nextBtn.style.display =
+            currentIndex + itemsPerPage >= properties.length ? "none" : "block";
+        }
+
+        nextBtn.addEventListener("click", function () {
+          if (currentIndex + itemsPerPage < properties.length) {
+            currentIndex += itemsPerPage;
+            showProperties();
+          }
+        });
+
+        prevBtn.addEventListener("click", function () {
+          if (currentIndex > 0) {
+            currentIndex -= itemsPerPage;
+            showProperties();
+          }
+        });
+
+        window.addEventListener("resize", function () {
+          itemsPerPage = getItemsPerPage();
+          currentIndex = 0; // Reset index on resize
+          showProperties();
+        });
+
+        showProperties();
+      });
+    </script>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-left">
+          <img
+            src="assets/images/mainlogo.png"
+            alt="JPW&N Corporation Logo"
+            class="footer-logo"
+          />
+        </div>
+
+        <div class="footer-center">
+          <h3>Our Services</h3>
+          <ul>
+            <li><a href="baguiotransient.html">Baguio Transient</a></li>
+            <li><a href="jpwrresidence.html">JPWR Residence</a></li>
+            <li><a href="jpwrsmiley.html">Similey Resort</a></li>
+            <li><a href="alumandglass.html">Glass and Aluminum Supply</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-right">
+          <div class="review-contact-wrapper">
+            <!-- Contact Info (Now Left-Aligned) -->
+            <div class="contact-info">
+              <h3>Get in Touch</h3>
+              <p><i class="fas fa-phone"></i>0977 802 0701</p>
+              <p><i class="fas fa-envelope"></i> jpwrresidences@gmail.com</p>
+
+              <!-- Social Media Links -->
+              <div class="social-links">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100083330313172"
+                  target="_blank"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+            <!-- Carousel Review Section (Now Left-Aligned) 
+              <div class="review-carousel">
+              <button class="carousel-btn prev" onclick="prevReview()">
+                &#10094;
+              </button>
+              <div class="carousel-content">
+                <p class="review-text">
+                  "Great service and very accommodating!"
+                </p>
+                <p class="review-author">- John D.</p>
+              </div>
+              <button class="carousel-btn next" onclick="nextReview()">
+                &#10095;
+              </button>
+            </div>
+            -->
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 JPW&N Corporation. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

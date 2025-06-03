@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find a Rental Home</title>
+    <link rel="stylesheet" href="assets/homeresidence.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/homeresidence.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <div class="logo">
+        <img src="assets/images/mainlogo.png" alt="JPWN Corporation Logo" />
+      </div>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li class="business-menu">
+            <a href="#" class="find-home" onclick="toggleBusiness(event)"
+              >Our Business</a
+            >
+            <ul class="business-list">
+              <li><a href="jpwrsmiley.html">JPWR Smiley Resort</a></li>
+              <li><a href="jpwrresidence.html">JPWR Residences</a></li>
+              <li><a href="baguiotransient.html">JPWR Transient</a></li>
+              <li><a href="alumandglass.html">JPWR Aluminum and Glass</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      </nav>
+    </header>
+
+    <script>
+      function toggleBusiness(event) {
+        event.preventDefault();
+        const businessMenu = event.target.parentElement;
+        businessMenu.classList.toggle("active");
+      }
+
+      function toggleMenu() {
+        const menu = document.querySelector(".nav-menu");
+        menu.classList.toggle("active");
+      }
+    </script>
+
+    <section id="about-us" class="about-section">
+      <div class="about-container">
+        <div class="about-content">
+          <div class="about-text-box">
+            <h1>About Us</h1>
+            <p>
+              Finding the perfect rental home should be easy and stress-free.
+              Our rental services are designed to match you with a home that
+              fits your lifestyle, budget, and needs. Whether you're looking for
+              a cozy apartment, a spacious house, or a short-term rental, we
+              provide reliable listings, transparent pricing, and dedicated
+              support to make your renting experience smooth and hassle-free.
+              Let us help you find a place you’ll love to call home! Below are
+              the other businesses we have:
+            </p>
+          </div>
+          <div class="about-image">
+            <img src="assets/images/d2.jpg" alt="Business discussion" />
+          </div>
+        </div>
+        <div class="logo-container">
+          <div class="logo-box">
+            <img
+              src="assets/images/JPWR Baguio.png"
+              alt="JPWR Baguio Transient House"
+            />
+          </div>
+          <div class="logo-box">
+            <img
+              src="assets/images/JPWR Glass.png"
+              alt="JPWR Glass & Aluminum Supply"
+            />
+          </div>
+          <div class="logo-box">
+            <img
+              src="assets/images/JPWR Residences.png"
+              alt="JPWR Residences"
+            />
+          </div>
+          <div class="logo-box">
+            <img
+              src="assets/images/smiley-removebg.png"
+              alt="JPWR Smiley Beach Resort"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="businesses-carousel">
+      <div class="carousel-container">
+        <div class="carousel">
+          <!-- JPWR Baguio Transient House -->
+          <div class="carousel-item">
+            <div class="content-container">
+              <!-- Left: Video -->
+              <div class="video-container">
+                <video width="560" height="315" controls>
+                  <source
+                    src="https://res.cloudinary.com/dbgiapjao/video/upload/v1741267012/TransientA_hazsha.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+
+              <!-- Right: Logo + Description -->
+              <div class="info-container">
+                <img
+                  src="assets/images/JPWR Baguio.png"
+                  alt="JPWR Baguio Transient House"
+                  class="logo"
+                />
+                <p>
+                  "Discover comfort and affordability in the heart of Baguio!
+                  JPWR Baguio Transient House offers well-furnished
+                  accommodations, perfect for travelers looking for a relaxing
+                  stay. Whether you're here for a vacation or a quick getaway,
+                  enjoy a cozy home with modern amenities, breathtaking views,
+                  and easy access to Baguio’s top attractions."
+                </p>
+                <div class="fb-link">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100085427736764"
+                    target="_blank"
+                  >
+                    <i class="fab fa-facebook"></i> Visit our Facebook page
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- JPWR Glass & Aluminum Supply -->
+          <div class="carousel-item">
+            <div class="content-container">
+              <div class="video-container">
+                <video width="560" height="315" controls>
+                  <source
+                    src="assets/videos/GlassAluminum.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+
+              <div class="info-container">
+                <img
+                  src="assets/images/JPWR Glass.png"
+                  alt="JPWR Glass & Aluminum Supply"
+                  class="logo"
+                />
+                <p>
+                  "Your trusted partner for premium glass and aluminum
+                  solutions!" JPWR Glass & Aluminum Supply provides
+                  high-quality, durable, and stylish materials for homes and
+                  businesses. From custom glass panels to aluminum
+                  installations, we offer top-tier craftsmanship to enhance both
+                  aesthetics and functionality at competitive prices.
+                </p>
+                <div class="fb-link">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61562392861658"
+                    target="_blank"
+                  >
+                    <i class="fab fa-facebook"></i> Visit our Facebook page
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- JPWR Residences -->
+          <div class="carousel-item">
+            <div class="content-container">
+              <div class="video-container">
+                <video width="560" height="315" controls>
+                  <source
+                    src="https://res.cloudinary.com/dbgiapjao/video/upload/v1741271641/JPWR_Residences_Video_wwmuzb.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+
+              <div class="info-container">
+                <img
+                  src="assets/images/JPWR Residences.png"
+                  alt="JPWR Residences"
+                  class="logo"
+                />
+                <p>
+                  "Modern living designed for comfort, convenience, and
+                  elegance." JPWR Residences offers contemporary, high-quality
+                  housing solutions tailored for families, professionals, and
+                  real estate investors. With prime locations, secure
+                  communities, and thoughtfully designed spaces, our residences
+                  provide the perfect blend of luxury and practicality.
+                </p>
+                <div class="fb-link">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100083330313172"
+                    target="_blank"
+                  >
+                    <i class="fab fa-facebook"></i> Visit our Facebook page
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- JPWR Sanley Beach Resort -->
+          <div class="carousel-item">
+            <div class="content-container">
+              <div class="video-container">
+                <video width="560" height="315" controls>
+                  <source
+                    src="https://res.cloudinary.com/dbgiapjao/video/upload/v1741274294/smiley-video_or1zio.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+
+              <div class="info-container">
+                <img
+                  src="assets/images/smiley-removebg.png"
+                  alt="JPWR Smiley Beach Resort"
+                  class="logo"
+                />
+                <p>
+                  "A tropical paradise where relaxation meets adventure!" Escape
+                  to JPWR Sanley Beach Resort and experience stunning ocean
+                  views, pristine white sand beaches, and world-class
+                  hospitality. Whether you're seeking a peaceful retreat or an
+                  exciting beach getaway, our resort is the perfect destination
+                  to unwind, recharge, and create unforgettable memories.
+                </p>
+                <div class="fb-link">
+                  <a
+                    href="https://www.facebook.com/JPWRSMILEYBEACHRESORT"
+                    target="_blank"
+                  >
+                    <i class="fab fa-facebook"></i> Visit our Facebook page
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carousel Navigation Buttons -->
+          <button class="carousel-prev" onclick="prevSlide()">&#10094;</button>
+          <button class="carousel-next" onclick="nextSlide()">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      let currentIndex = 0;
+
+      function showSlide(index) {
+        const slides = document.querySelectorAll(".carousel-item");
+        if (index >= slides.length) currentIndex = 0;
+        if (index < 0) currentIndex = slides.length - 1;
+
+        slides.forEach((slide, i) => {
+          if (i === currentIndex) {
+            slide.style.display = "block";
+          } else {
+            slide.style.display = "none";
+            stopVideo(slide);
+          }
+        });
+      }
+
+      function nextSlide() {
+        stopVideo(
+          document.querySelector(
+            ".carousel-item:nth-child(" + (currentIndex + 1) + ")"
+          )
+        );
+        currentIndex++;
+        showSlide(currentIndex);
+      }
+
+      function prevSlide() {
+        stopVideo(
+          document.querySelector(
+            ".carousel-item:nth-child(" + (currentIndex + 1) + ")"
+          )
+        );
+        currentIndex--;
+        showSlide(currentIndex);
+      }
+
+      function stopVideo(slide) {
+        const video = slide.querySelector("video");
+        if (video) {
+          video.pause();
+          video.currentTime = 0;
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", () =>
+        showSlide(currentIndex)
+      );
+    </script>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-left">
+          <img
+            src="assets/images/mainlogo.png"
+            alt="JPW&N Corporation Logo"
+            class="footer-logo"
+          />
+        </div>
+
+        <div class="footer-center">
+          <h3>Our Services</h3>
+          <ul>
+            <li><a href="baguiotransient.html">Baguio Transient</a></li>
+            <li><a href="jpwrresidence.html">JPWR Residence</a></li>
+            <li><a href="jpwrsmiley.html">Similey Resort</a></li>
+            <li><a href="alumandglass.html">Glass and Aluminum Supply</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-right">
+          <div class="review-contact-wrapper">
+            <!-- Contact Info (Now Left-Aligned) -->
+            <div class="contact-info">
+              <h3>Get in Touch</h3>
+              <p><i class="fas fa-phone"></i>0977 802 0701</p>
+              <p><i class="fas fa-envelope"></i> jpwrresidences@gmail.com</p>
+
+              <!-- Social Media Links -->
+              <div class="social-links">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100083330313172"
+                  target="_blank"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+            <!-- Carousel Review Section (Now Left-Aligned) 
+              <div class="review-carousel">
+              <button class="carousel-btn prev" onclick="prevReview()">
+                &#10094;
+              </button>
+              <div class="carousel-content">
+                <p class="review-text">
+                  "Great service and very accommodating!"
+                </p>
+                <p class="review-author">- John D.</p>
+              </div>
+              <button class="carousel-btn next" onclick="nextReview()">
+                &#10095;
+              </button>
+            </div>
+            -->
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 JPW&N Corporation. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1132 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #d7e9ff;
+}
+
+/* Header (Navbar) */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 5%;
+  background: #d7e9ff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 80px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: auto;
+  max-height: 70px;
+  width: auto;
+}
+
+/* Navbar */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-menu li {
+  display: inline-block;
+  position: relative;
+}
+
+/* Navbar Links */
+.nav-menu li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  transition: color 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Underline Effect on Hover */
+.nav-menu li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  bottom: -3px;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-menu li a:hover::after {
+  transform: scaleX(1);
+}
+
+/* "Our Business" Dropdown */
+.business-list {
+  display: none;
+  position: absolute;
+  background: white;
+  list-style: none;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  min-width: 180px;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Show Dropdown on Hover */
+.business-menu:hover .business-list,
+.business-menu.active .business-list {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dropdown Items */
+.business-list li {
+  padding: 8px 12px;
+}
+
+.business-list li a {
+  color: black;
+  font-size: 1em;
+  display: block;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Dropdown Hover Effect */
+.business-list li a:hover {
+  background: #d7e9ff;
+  border-radius: 4px;
+}
+
+/* Find Home Button */
+.find-home {
+  background-color: black;
+  color: white !important;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Find Home Hover */
+.find-home:hover {
+  background-color: #222;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Back Button */
+.back-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-button:hover {
+  background-color: #333;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo img {
+    max-height: 50px;
+  }
+
+  /* Show Menu Toggle */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Hide Navigation by Default */
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: #d7e9ff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Show Menu When Active */
+  .nav-menu.active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Adjust Dropdown for Mobile */
+  .business-menu {
+    text-align: center;
+  }
+
+  .business-list {
+    position: static;
+    display: none;
+    opacity: 1;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .business-menu.active .business-list {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    max-height: 40px;
+  }
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Beach Section - Fullscreen Background */
+.beach-section {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Container for Image & Content */
+.beach-container {
+  position: relative;
+  width: 100%;
+  height: 85vh; /* Adjust height for desktop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column; /* Ensure everything stacks properly */
+  padding: 0 20px; /* Add padding for smaller screens */
+}
+
+/* Background Image */
+.bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Dark Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Adjust darkness */
+  z-index: 0;
+}
+
+/* Text Content */
+.text-overlay {
+  position: absolute;
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  font-family: "Croissant One", cursive;
+  padding: 20px;
+  z-index: 2;
+  width: 90%; /* Ensure text doesn't stretch too far */
+  max-width: 700px; /* Limit width */
+}
+
+/* Heading & Title */
+.headline {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+/* Ensure Image Below Doesn't Overlap */
+.image-below {
+  width: 90%;
+  max-width: 600px;
+  border-radius: 12px;
+  margin-top: 120px; /* Increase margin to push it lower */
+  z-index: 1; /* Keep it below the text */
+}
+
+/* 🔻 Responsive Adjustments 🔻 */
+@media (max-width: 1024px) {
+  .beach-container {
+    min-height: 90vh;
+  }
+
+  .headline {
+    font-size: 34px;
+  }
+
+  .title {
+    font-size: 50px;
+  }
+
+  .image-below {
+    margin-top: 140px; /* Adjust spacing */
+  }
+}
+
+@media (max-width: 768px) {
+  .beach-container {
+    min-height: 85vh;
+  }
+
+  .headline {
+    font-size: 28px;
+  }
+
+  .title {
+    font-size: 42px;
+  }
+
+  .image-below {
+    width: 85%;
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .beach-container {
+    min-height: 80vh;
+    padding: 10px;
+  }
+
+  .headline {
+    font-size: 24px;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+
+  .text-overlay {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .image-below {
+    width: 90%;
+    margin-top: 90px; /* Adjust for smaller screens */
+  }
+}
+/* Section Styling */
+.second-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 10%;
+  background-color: #fdf7f0;
+  flex-wrap: wrap; /* Allows elements to wrap on smaller screens */
+  gap: 30px; /* Adds spacing between image and text */
+}
+
+/* Image Styling */
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  max-width: 50%;
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Content */
+.content {
+  flex: 1;
+  padding: 0 40px;
+  max-width: 50%;
+}
+
+.content h2 {
+  font-size: 28px;
+  color: #2c3e50;
+  font-weight: bold;
+  font-family: "Croissant One", cursive;
+}
+
+.content p {
+  color: #6c757d;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
+/* Feature List */
+.feature {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.feature img {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.feature h3 {
+  font-size: 18px;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.feature p {
+  font-size: 14px;
+  color: #6c757d;
+  margin: 5px 0;
+}
+
+/* 🔻 Responsive Design 🔻 */
+@media (max-width: 1024px) {
+  .second-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .image-container {
+    max-width: 80%; /* Allow image to take more space */
+  }
+
+  .content {
+    max-width: 80%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .second-section {
+    padding: 30px 5%;
+  }
+
+  .image-container {
+    max-width: 90%;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .feature {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feature img {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .second-section {
+    padding: 20px;
+  }
+
+  .image-container {
+    max-width: 100%;
+  }
+
+  .content h2 {
+    font-size: 24px;
+  }
+
+  .content p {
+    font-size: 14px;
+  }
+
+  .feature h3 {
+    font-size: 16px;
+  }
+
+  .feature p {
+    font-size: 13px;
+  }
+}
+
+/* Third Section */
+.third-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f8f5; /* Softer pastel green */
+  padding: 80px 5%;
+}
+
+/* Container for Text & Image */
+.container-third-section {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px;
+}
+
+/* Text Content */
+.text-content {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.text-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  color: #1a3d4c;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.text-content p {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  color: #34495e;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.text-content h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  color: #1a3d4c;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Image Content */
+.image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-content img {
+  max-width: 100%;
+  max-height: 450px;
+  width: auto;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-content img:hover {
+  transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+/* 🔻 Responsive Adjustments 🔻 */
+@media (max-width: 1024px) {
+  .container-third-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-content {
+    padding-right: 0;
+  }
+
+  .image-content img {
+    max-height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .third-section {
+    padding: 60px 5%;
+  }
+
+  .text-content h2 {
+    font-size: 36px;
+  }
+
+  .text-content p {
+    font-size: 16px;
+  }
+
+  .text-content h3 {
+    font-size: 18px;
+  }
+
+  .image-content img {
+    max-height: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .third-section {
+    padding: 40px 5%;
+  }
+
+  .text-content h2 {
+    font-size: 30px;
+  }
+
+  .text-content p {
+    font-size: 15px;
+  }
+
+  .text-content h3 {
+    font-size: 16px;
+  }
+
+  .image-content img {
+    max-height: 280px;
+  }
+}
+
+/* Fourth Section */
+.fourth-section {
+  background-color: #fdfaf6;
+  padding: 80px 5%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.container-fourth-section {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title and Subtitle */
+.subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  color: #2c3e50;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px auto 10px;
+}
+
+.description {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  color: #555;
+  max-width: 700px;
+  margin: 10px auto 10px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+  text-align: left;
+}
+
+.grid-item:hover {
+  transform: translateY(-5px);
+}
+
+.img-container {
+  width: 180px; /* Fixed width for all images */
+  height: 180px; /* Fixed height for all images */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the container without distortion */
+  border-radius: 12px;
+}
+
+.text-container {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.text-container h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  color: #2c3e50;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.text-container p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .img-container {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 10px;
+  }
+
+  .text-container {
+    padding-left: 0;
+  }
+}
+/* General Footer Styling */
+footer {
+  background: #f0f8ff; /* Light blue background */
+  color: #333;
+  padding: 40px 0 10px;
+  font-family: "Arial", sans-serif;
+}
+
+/* Footer Layout */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: white; /* White container background */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+/* Left Section (Logo) */
+.footer-left {
+  width: 25%;
+  min-width: 200px; /* Prevents it from getting too small */
+}
+
+.footer-left img {
+  width: 100%; /* Makes the logo responsive */
+  max-width: 350px; /* Limits the size */
+  height: auto;
+  filter: drop-shadow(2px 2px 5px gray);
+}
+
+/* Center Section */
+.footer-center {
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-center h3,
+.footer-right h3 {
+  font-weight: bold;
+  font-size: 18px;
+  color: #000000;
+}
+
+.footer-center ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-center ul li {
+  margin: 5px 0;
+}
+
+.footer-center ul li a {
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.footer-center ul li a:hover {
+  color: #005599;
+}
+
+/* Review & Contact Wrapper */
+.review-contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  flex-wrap: wrap; /* Allows wrapping on small screens */
+}
+
+/* Contact Info */
+.contact-info {
+  text-align: left;
+  width: 50%;
+  min-width: 250px; /* Prevents it from shrinking too much */
+}
+
+.contact-info p {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  color: #0077cc;
+}
+
+.contact-info i {
+  margin-right: 8px;
+  color: #005599;
+}
+
+/* Review Carousel */
+.review-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0077cc;
+  padding: 15px;
+  border-radius: 8px;
+  position: relative;
+  width: 50%;
+  min-width: 250px; /* Prevents it from getting too small */
+  text-align: center;
+  color: white;
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Review Text */
+.review-text {
+  font-size: 16px;
+  font-style: italic;
+  color: #f0f8ff;
+}
+
+.review-author {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Social Media Icons */
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 5px;
+  font-size: 20px;
+  color: #0077cc;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #005599;
+  transform: scale(1.1);
+}
+
+/* 🔹 Responsive Design Adjustments */
+@media (max-width: 1024px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .footer-left img {
+    max-width: 250px;
+  }
+
+  .review-contact-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .contact-info,
+  .review-carousel {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Align 'Get in Touch' properly on small screens */
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-info h3 {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* Reduce spacing for compact design */
+    margin-top: 8px;
+  }
+
+  .social-links a {
+    font-size: 16px; /* Adjust icon size for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 20px;
+  }
+
+  .footer-left img {
+    max-width: 200px;
+  }
+
+  .footer-center {
+    width: 100%;
+  }
+
+  .review-contact-wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact-info,
+  .review-carousel {
+    width: 100%;
+  }
+
+  /* Align 'Get in Touch' properly on small screens */
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-info h3 {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* Reduce spacing for compact design */
+    margin-top: 8px;
+  }
+
+  .social-links a {
+    font-size: 16px; /* Adjust icon size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 15px;
+  }
+
+  .footer-left img {
+    max-width: 180px;
+  }
+
+  .footer-center h3,
+  .footer-right h3 {
+    font-size: 16px;
+  }
+
+  .footer-center ul li {
+    font-size: 14px;
+  }
+
+  .contact-info p {
+    font-size: 14px;
+  }
+
+  .review-text {
+    font-size: 14px;
+  }
+
+  .review-author {
+    font-size: 12px;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+  }
+
+  .social-links a {
+    font-size: 18px;
+  }
+
+  /* Align 'Get in Touch' properly on small screens */
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-info h3 {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* Reduce spacing for compact design */
+    margin-top: 8px;
+  }
+
+  .social-links a {
+    font-size: 16px; /* Adjust icon size for smaller screens */
+  }
+}

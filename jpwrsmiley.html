@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find a Rental Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/jpwrsmiley.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <div class="logo">
+        <img src="assets/images/mainlogo.png" alt="JPWN Corporation Logo" />
+      </div>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li class="business-menu">
+            <a href="#" class="find-home" onclick="toggleBusiness(event)"
+              >Our Business</a
+            >
+            <ul class="business-list">
+              <li><a href="jpwrsmiley.html">JPWR Smiley Resort</a></li>
+              <li><a href="jpwrresidence.html">JPWR Residences</a></li>
+              <li><a href="baguiotransient.html">JPWR Transient</a></li>
+              <li><a href="alumandglass.html">JPWR Aluminum and Glass</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      </nav>
+    </header>
+
+    <script>
+      function toggleBusiness(event) {
+        event.preventDefault();
+        const businessMenu = event.target.parentElement;
+        businessMenu.classList.toggle("active");
+      }
+
+      function toggleMenu() {
+        const menu = document.querySelector(".nav-menu");
+        menu.classList.toggle("active");
+      }
+    </script>
+
+    <section class="beach-section">
+      <div class="beach-container">
+        <img
+          src="assets/images/smileybg1.jpg"
+          alt="Beachside Oasis"
+          class="bg-image"
+        />
+        <div class="overlay"></div>
+        <!-- Dark overlay for contrast -->
+        <div class="text-overlay">
+          <h2 class="headline">Discover the Beachside Oasis</h2>
+          <h1 class="title">
+            Unwind and <br />
+            Indulge in Coastal
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="second-section">
+      <!-- Left Image -->
+      <div class="image-container">
+        <img src="assets/images/smileyd1.jpg" alt="Beach Illustration" />
+      </div>
+
+      <!-- Right Content -->
+      <div class="content">
+        <h2>Embrace the Laid-Back</h2>
+        <p>
+          Immerse yourself in the soothing sounds of the waves, breathe in the
+          refreshing ocean breeze, and unwind in the comfort of our beautifully
+          appointed accommodations.
+        </p>
+
+        <!-- Feature List -->
+        <div class="feature">
+          <img
+            src="assets/images/sunbathing-removebg-preview.png"
+            alt="Amenities"
+          />
+          <div>
+            <h3>Discover Our Amenities</h3>
+            <p>
+              Explore our exciting range of activities, from water sports and
+              beach games to relaxing spa treatments.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <img
+            src="assets/images/smileyd2-removebg-preview.png"
+            alt="Personalized Services"
+          />
+          <div>
+            <h3>Learn More</h3>
+            <p>
+              Enhance your stay with our thoughtful amenities and personalized
+              services.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="third-section">
+      <div class="container-third-section">
+        <div class="text-content">
+          <h2>
+            Immerse <br />
+            Yourself
+          </h2>
+          <p>
+            Experience the Epitome of Relaxation and Rejuvenation at Our
+            Beachfront Oasis
+          </p>
+          <h3>Discover More</h3>
+          <p>
+            Indulge in the Tranquility of Our Beach Resort, Where the Sound of
+            Crashing Waves and the Warmth of the Sun
+          </p>
+          <h3>Explore</h3>
+          <p>
+            Our Range of Accommodations, Tailored to Suit Your Preferences and
+            Ensure a Truly
+          </p>
+        </div>
+        <div class="image-content">
+          <img src="assets/images/smileyd3.jpg" alt="Beachfront Resort" />
+        </div>
+      </div>
+    </section>
+
+    <section class="fourth-section">
+      <div class="container-fourth-section">
+        <h2 class="section-title">Explore Our Amenities</h2>
+        <p class="description">
+          Discover the perfect balance of relaxation and adventure at our beach
+          resort. Indulge in soothing spa treatments and enjoy exciting
+          activities, from sports to ultimate relaxation.
+        </p>
+
+        <div class="grid-container">
+          <div class="grid-item light-pink">
+            <div class="img-container">
+              <img src="assets/images/smileyd4.jpg" alt="Pool" />
+            </div>
+            <div class="text-container">
+              <h3>Pool</h3>
+              <p>
+                Take a refreshing dip in our expansive pool, designed for
+                relaxation and fun under the sun.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid-item light-green">
+            <div class="img-container">
+              <img src="assets/images/smileyd8.jpg" alt="Kubo Near the Beach" />
+            </div>
+            <div class="text-container">
+              <h3>Kubo Near the Beach</h3>
+              <p>
+                Relax and unwind in our cozy kubo, just steps away from the
+                beach. Enjoy the fresh sea breeze.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid-item light-pink">
+            <div class="img-container">
+              <img src="assets/images/smileyd5.jpg" alt="Jacuzzi" />
+            </div>
+            <div class="text-container">
+              <h3>Jacuzzi</h3>
+              <p>
+                Relax and unwind in our soothing jacuzzi, ideal for de-stressing
+                and enjoying a peaceful moment.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid-item light-green">
+            <div class="img-container">
+              <img src="assets/images/smileyd7.jpg" alt="Billiards" />
+            </div>
+            <div class="text-container">
+              <h3>Billiards</h3>
+              <p>
+                Challenge friends or enjoy a casual game of billiards in our
+                dedicated game area.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-left">
+          <img
+            src="assets/images/mainlogo.png"
+            alt="JPW&N Corporation Logo"
+            class="footer-logo"
+          />
+        </div>
+
+        <div class="footer-center">
+          <h3>Our Services</h3>
+          <ul>
+            <li><a href="baguiotransient.html">Baguio Transient</a></li>
+            <li><a href="jpwrresidence.html">JPWR Residence</a></li>
+            <li><a href="jpwrsmiley.html">Similey Resort</a></li>
+            <li><a href="alumandglass.html">Glass and Aluminum Supply</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-right">
+          <div class="review-contact-wrapper">
+            <!-- Contact Info (Now Left-Aligned) -->
+            <div class="contact-info">
+              <h3>Get in Touch</h3>
+              <p><i class="fas fa-phone"></i>0977 802 0701</p>
+              <p><i class="fas fa-envelope"></i> jpwrresidences@gmail.com</p>
+
+              <!-- Social Media Links -->
+              <div class="social-links">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100083330313172"
+                  target="_blank"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+            <!-- Carousel Review Section (Now Left-Aligned) 
+              <div class="review-carousel">
+              <button class="carousel-btn prev" onclick="prevReview()">
+                &#10094;
+              </button>
+              <div class="carousel-content">
+                <p class="review-text">
+                  "Great service and very accommodating!"
+                </p>
+                <p class="review-author">- John D.</p>
+              </div>
+              <button class="carousel-btn next" onclick="nextReview()">
+                &#10095;
+              </button>
+            </div>
+            -->
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 JPW&N Corporation. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

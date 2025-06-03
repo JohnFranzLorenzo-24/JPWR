@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find a Rental Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/homeresidence.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <div class="logo">
+        <img src="assets/images/mainlogo.png" alt="JPWN Corporation Logo" />
+      </div>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li class="business-menu">
+            <a href="#" class="find-home" onclick="toggleBusiness(event)"
+              >Our Business</a
+            >
+            <ul class="business-list">
+              <li><a href="jpwrsmiley.html">JPWR Smiley Resort</a></li>
+              <li><a href="jpwrresidence.html">JPWR Residences</a></li>
+              <li><a href="baguiotransient.html">JPWR Transient</a></li>
+              <li><a href="alumandglass.html">JPWR Aluminum and Glass</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      </nav>
+    </header>
+
+    <script>
+      function toggleBusiness(event) {
+        event.preventDefault();
+        const businessMenu = event.target.parentElement;
+        businessMenu.classList.toggle("active");
+      }
+
+      function toggleMenu() {
+        const menu = document.querySelector(".nav-menu");
+        menu.classList.toggle("active");
+      }
+    </script>
+
+    <!-- Main Section (Hero + Stats + Search) -->
+    <section class="main-section">
+      <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+          <div class="content">
+            <h1>Find a Rental That Feels Like Home</h1>
+            <p>
+              Looking for a place to stay? We’re here to help you find a rental
+              that fits your lifestyle and needs.
+            </p>
+            <button class="get-started">Get Started</button>
+          </div>
+
+          <div class="image">
+            <img src="assets/images/bg1.png" alt="House Image" />
+          </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats">
+          <div>
+            <h2>1200<span>+</span></h2>
+            <p>Properties</p>
+          </div>
+          <div>
+            <h2>4500<span>+</span></h2>
+            <p>Happy customers</p>
+          </div>
+          <div>
+            <h2>100<span>+</span></h2>
+            <p>Awards</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Sections Can Be Added Below -->
+    <section class="top-properties" id="popular-homes">
+      <div class="top-header">
+        <h2>Our Popular Homes</h2>
+        <a href="find-a-home.html" class="explore-btn">Explore All</a>
+      </div>
+
+      <div class="property-carousel">
+        <div class="property-container">
+          <div
+            class="property-card"
+            data-price="Message us on Facebook for Inquires"
+            data-images='["assets/images/Atis St/Atis1.jpg", "assets/images/Atis St/Atis2.jpg", "assets/images/Atis St/Atis3.jpg", "assets/images/Atis St/Atis4.jpg"]'
+            data-overview="A luxurious 4-bedroom home in the heart of Banana Island."
+            data-amenities="Swimming Pool, Gym, Smart Home System"
+            data-description="This modern property offers breathtaking views, state-of-the-art interiors, and a spacious layout."
+          >
+            <img
+              src="assets/images/Atis St/Atis1.jpg"
+              alt="Banana Island, Lagos"
+            />
+            <h3>
+              <span class="location-icon">📍</span>Atis St. Antipolo Hills
+            </h3>
+            <div class="property-details">
+              <span class="bedrooms">4 Bed</span>
+              <span class="size">10x10 m</span>
+              <span class="area">1600 m²</span>
+            </div>
+            <button class="more-btn">MORE</button>
+            <span class="price"></span>
+          </div>
+
+          <div
+            class="property-card"
+            data-price="Message us on Facebook for Inquires"
+            data-images='["assets/images/Everlasting St/everlasting1.jpg", "assets/images/Everlasting St/everlasting2.jpg", "assets/images/Everlasting St/everlasting3.jpg", "assets/images/Everlasting St/everlasting4.jpg", "assets/images/Everlasting St/everlasting5.jpg"]'
+            data-overview="A stunning 5-bedroom mansion in Parkview Estate."
+            data-amenities="24/7 Security, Private Garden, Home Theater"
+            data-description="This home features elegant design, top-tier security, and ample space for luxury living."
+          >
+            <img
+              src="assets/images/Everlasting St/everlasting1.jpg"
+              alt="Parkview Estate, Lagos"
+            />
+            <h3>
+              <span class="location-icon">📍</span> Everlasting St, Antipolo
+              Hills
+            </h3>
+            <div class="property-details">
+              <span class="bedrooms">5 Bed</span>
+              <span class="size">10x10 m</span>
+              <span class="area">1600 m²</span>
+            </div>
+            <button class="more-btn">MORE</button>
+            <span class="price"></span>
+          </div>
+
+          <div
+            class="property-card"
+            data-images='["assets/images/Dama de noche/dama1.jpg", "assets/images/Dama de noche/dama2.jpg", "assets/images/Dama de noche/dama3.jpg", "assets/images/Dama de noche/dama4.jpg", "assets/images/Dama de noche/dama5.jpg"]'
+            data-overview="An exclusive 3-bedroom villa in Eko Atlantic."
+            data-amenities="Beach Access, Rooftop Terrace, Concierge Service"
+            data-description="A luxurious coastal property with modern architecture and premium facilities."
+          >
+            <img
+              src="assets/images/Dama de noche/dama1.jpg"
+              alt="Eko Atlantic, Lagos"
+            />
+            <h3><span class="location-icon">📍</span>Dama De Noche</h3>
+            <div class="property-details">
+              <span class="bedrooms">3 Bed</span>
+              <span class="size">12x15 m</span>
+              <span class="area">2000 m²</span>
+            </div>
+            <button class="more-btn">MORE</button>
+            <span class="price"></span>
+          </div>
+        </div>
+      </div>
+      <div class="fb-inquiry">
+        <a
+          href="https://www.facebook.com/profile.php?id=100083330313172"
+          target="_blank"
+        >
+          <i class="fab fa-facebook"></i> Visit our Facebook page for inquiries
+        </a>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="propertyModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+          <div class="modal-images">
+            <img id="mainImage" src="" alt="House Image" />
+            <div class="image-gallery"></div>
+          </div>
+          <div class="modal-details">
+            <p class="modal-price"></p>
+            <h3 id="modalTitle"></h3>
+            <p>
+              <span class="location-icon"></span>
+              <span id="modalLocation"></span>
+            </p>
+            <div class="property-details">
+              <span id="modalBedrooms"></span>
+              <span id="modalSize"></span>
+              <span id="modalArea"></span>
+            </div>
+
+            <div class="section">
+              <div class="section-header">OVERVIEW</div>
+              <div class="section-content">Detailed overview of the house.</div>
+            </div>
+            <div class="section">
+              <div class="section-header">AMENITIES</div>
+              <div class="section-content">List of amenities available.</div>
+            </div>
+            <div class="section">
+              <div class="section-header">DESCRIPTION OF THE HOUSE</div>
+              <div class="section-content">
+                Complete description of the property.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let openModal = null;
+
+        function disableScroll() {
+          document.body.style.overflow = "hidden";
+        }
+
+        function enableScroll() {
+          document.body.style.overflow = "";
+        }
+
+        document.querySelectorAll(".more-btn").forEach((button) => {
+          button.addEventListener("click", function () {
+            if (openModal) {
+              openModal.style.display = "none";
+            }
+
+            const modal = document.getElementById("propertyModal");
+            const modalImage = document.getElementById("mainImage");
+            const modalTitle = document.getElementById("modalTitle");
+            const modalLocation = document.getElementById("modalLocation");
+            const modalBedrooms = document.getElementById("modalBedrooms");
+            const modalSize = document.getElementById("modalSize");
+            const modalArea = document.getElementById("modalArea");
+            const modalPrice = document.querySelector(".modal-price");
+            const imageGallery = document.querySelector(".image-gallery");
+
+            // Get sections dynamically instead of using nth-of-type
+            const modalSections = document.querySelectorAll(".section-content");
+
+            const propertyCard = this.closest(".property-card");
+
+            modalImage.src = propertyCard.querySelector("img").src;
+            modalTitle.innerText = propertyCard
+              .querySelector("h3")
+              .textContent.trim();
+            modalLocation.innerText = propertyCard
+              .querySelector("h3")
+              .textContent.trim();
+            modalBedrooms.innerText =
+              propertyCard.querySelector(".bedrooms").innerText;
+            modalSize.innerText = propertyCard.querySelector(".size").innerText;
+            modalArea.innerText = propertyCard.querySelector(".area").innerText;
+            modalPrice.innerText =
+              propertyCard.querySelector(".price").innerText;
+
+            // Ensure these attributes exist before accessing them
+            modalSections[0].innerText =
+              propertyCard.dataset.overview || "No overview available.";
+            modalSections[1].innerText =
+              propertyCard.dataset.amenities || "No amenities listed.";
+            modalSections[2].innerText =
+              propertyCard.dataset.description || "No description available.";
+
+            // Clear previous gallery images
+            imageGallery.innerHTML = "";
+            if (propertyCard.dataset.images) {
+              try {
+                const images = JSON.parse(propertyCard.dataset.images);
+                images.forEach((imgSrc) => {
+                  const img = document.createElement("img");
+                  img.src = imgSrc;
+                  img.classList.add("gallery-img");
+                  img.addEventListener("click", () => {
+                    modalImage.src = imgSrc;
+                  });
+                  imageGallery.appendChild(img);
+                });
+              } catch (error) {
+                console.error("Error parsing images:", error);
+              }
+            }
+
+            modal.style.display = "flex";
+            disableScroll(); // ✅ Disable scrolling
+            openModal = modal;
+          });
+        });
+
+        // Function to close modal
+        function closeModal() {
+          if (openModal) {
+            openModal.style.display = "none";
+            enableScroll(); // ✅ Enable scrolling
+            openModal = null;
+
+            // Close all expandable sections when exiting modal
+            document.querySelectorAll(".section-content").forEach((section) => {
+              section.style.display = "none";
+            });
+          }
+        }
+
+        // Attach close event to close button
+        document.querySelector(".close").addEventListener("click", closeModal);
+
+        // Close modal when clicking outside of modal content
+        document
+          .getElementById("propertyModal")
+          .addEventListener("click", function (e) {
+            if (e.target === this) {
+              closeModal();
+            }
+          });
+
+        // Close modal when pressing Escape key
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") {
+            closeModal();
+          }
+        });
+
+        // Expandable Sections Logic - Only One Open at a Time
+        document.querySelectorAll(".section-header").forEach((header) => {
+          header.addEventListener("click", function () {
+            // Close all sections first
+            document.querySelectorAll(".section-content").forEach((content) => {
+              if (content !== this.nextElementSibling) {
+                content.style.display = "none";
+              }
+            });
+
+            // Toggle clicked section
+            const content = this.nextElementSibling;
+            content.style.display =
+              content.style.display === "block" ? "none" : "block";
+          });
+        });
+      });
+    </script>
+
+    <script>
+      document
+        .querySelector(".get-started")
+        .addEventListener("click", function () {
+          document
+            .getElementById("popular-homes")
+            .scrollIntoView({ behavior: "smooth" });
+        });
+    </script>
+
+    <script>
+      function showAlert() {
+        alert(
+          "Thank you for subscribing! 🎉 As a special gift, enjoy an exclusive 10% discount on your next booking at our resort. We can't wait to welcome you! 😊"
+        );
+      }
+    </script>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-left">
+          <img
+            src="assets/images/mainlogo.png"
+            alt="JPW&N Corporation Logo"
+            class="footer-logo"
+          />
+        </div>
+
+        <div class="footer-center">
+          <h3>Our Services</h3>
+          <ul>
+            <li><a href="baguiotransient.html">Baguio Transient</a></li>
+            <li><a href="jpwrresidence.html">JPWR Residence</a></li>
+            <li><a href="jpwrsmiley.html">Similey Resort</a></li>
+            <li><a href="alumandglass.html">Glass and Aluminum Supply</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-right">
+          <div class="review-contact-wrapper">
+            <!-- Contact Info (Now Left-Aligned) -->
+            <div class="contact-info">
+              <h3>Get in Touch</h3>
+              <p><i class="fas fa-phone"></i>0977 802 0701</p>
+              <p><i class="fas fa-envelope"></i> jpwrresidences@gmail.com</p>
+
+              <!-- Social Media Links -->
+              <div class="social-links">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100083330313172"
+                  target="_blank"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+            <!-- Carousel Review Section (Now Left-Aligned) 
+              <div class="review-carousel">
+              <button class="carousel-btn prev" onclick="prevReview()">
+                &#10094;
+              </button>
+              <div class="carousel-content">
+                <p class="review-text">
+                  "Great service and very accommodating!"
+                </p>
+                <p class="review-author">- John D.</p>
+              </div>
+              <button class="carousel-btn next" onclick="nextReview()">
+                &#10095;
+              </button>
+            </div>
+            -->
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 JPW&N Corporation. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
